@@ -1,4 +1,5 @@
 # cDNA_Cupcake
+# THIS IS A FORK OF MAGDOLL'S CDNA_CUPCAKE REPOSITORY TO AVOID PACKAGE DEPRECATION ISSUES DUE TO A STOP OF MAINTENANCE OF THE SOFTWARE.
 
 ![logo](https://github.com/Magdoll/images_public/blob/master/logos/Cupcake_logo.png)
 
@@ -25,7 +26,7 @@ Since most of the scripts are independent (do not depend on each other), you can
 You can clone the GitHub repository, then add the GitHub repo path to your `$PATH` variable. The scripts are organized into different sub-directories (ex: `sequence/`, `rarefaction/` etc) so you will have to add them individually.
 
 ```
-git clone https://github.com/Magdoll/cDNA_Cupcake.git
+git clone https://github.com/ConesaLab/cDNA_Cupcake.git
 export PATH=$PATH:<path_to_Cupcake>/sequence/
 export PATH=$PATH:<path_to_Cupcake>/rarefaction/
 ```
