@@ -16,7 +16,7 @@ def get_ece_arr_from_alignment(record):
     ex: |||**||||**|||*|*|
     to  000110000110001010
     """
-    ece = np.zeros(len(record.alnStr), dtype=np.int)
+    ece = np.zeros(len(record.alnStr), dtype=np.int_)
     for offset, nt_aln in enumerate(record.alnStr):
         ece[offset] = 1 if nt_aln == '*' else 0
     return ece
@@ -87,7 +87,7 @@ def eval_blasr_alignment(record, qver_get_func, qvmean_get_func,
     last_state, last_tracking_nt, homopolymer_so_far = None, None, False
     cigar_str = ''
     # binary array of 0|1 where 1 is a penalty
-    ece = np.zeros(len(record.alnStr), dtype=np.int)
+    ece = np.zeros(len(record.alnStr), dtype=np.int_)
     # pdb.set_trace()
     for offset, nt_aln in enumerate(record.alnStr):
         if nt_aln == '|':  # match

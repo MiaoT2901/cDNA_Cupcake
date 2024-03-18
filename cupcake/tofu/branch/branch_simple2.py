@@ -17,10 +17,10 @@ class ContiVec:
 
     """
     def __init__(self, size):
-        self.baseC = np.zeros(size, dtype=np.int) # this was .B in the original code, base coverage
-        self.altC_pos = np.zeros(size, dtype=np.int)  # this was .C in the original code, evidence for alternative junction
-        self.altC_neg = np.zeros(size, dtype=np.int)
-        self.transC = np.zeros(size, dtype=np.int)  # this is .isTrans in the original code
+        self.baseC = np.zeros(size, dtype=np.int_) # this was .B in the original code, base coverage
+        self.altC_pos = np.zeros(size, dtype=np.int_)  # this was .C in the original code, evidence for alternative junction
+        self.altC_neg = np.zeros(size, dtype=np.int_)
+        self.transC = np.zeros(size, dtype=np.int_)  # this is .isTrans in the original code
 
 class BranchSimple:
     """
@@ -295,7 +295,7 @@ class BranchSimple:
         result = []
         for r in records:
             stuff = self.match_record(r, tolerate_end=tolerate_end)#, tolerate_middle=self.MIN_EXON_SIZE)
-            m = np.zeros((1, mat_size), dtype=np.int)
+            m = np.zeros((1, mat_size), dtype=np.int_)
             for x in stuff: m[0, x.value]=1
             result.append((r.qID, r.flag.strand, m))
 
